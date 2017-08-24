@@ -1,10 +1,10 @@
 pipeline {
-    agent label: ''
+    agent any
 
     stages {
         stage('Build') {
             when {
-                env.BRANCH_NAME == 'develop'
+                branch 'develop'
             }
             steps {
                 echo "Building..."
